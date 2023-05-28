@@ -1,10 +1,20 @@
 import './App.css'
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import ListPage from "./pages/ListPage/ListPage.tsx";
+import GeneratePage from "./pages/GeneratePage/GeneratePage.tsx";
+import store from "./store/store.ts";
+import { Provider } from "react-redux";
 
 function App() {
   return (
-    <div className="bg-emerald-600 text-3xl font-bold underline text-red-600">
-      Hello
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<ListPage />} />
+          <Route path="/generate" element={<GeneratePage />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   )
 }
 
