@@ -1,13 +1,12 @@
 import  { AiOutlineCloudServer } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { MdLightMode, MdModeNight } from "react-icons/md";
-import { useDispatch, useSelector } from "react-redux";
 import {setMode} from "../../store/slices/modeSlice.ts";
+import {useAppDispatch, useAppSelector} from "../../sharedHooks/commonHooks.ts";
 
 const Header = () => {
-  const dispatch = useDispatch();
-  const { mode } = useSelector((state: any) => state.modeReducer);
-
+  const dispatch = useAppDispatch()
+  const { mode } = useAppSelector((state) => state.modeReducer);
   const setModeHandler = (modeName: string) => {
     dispatch(setMode(modeName));
   };
