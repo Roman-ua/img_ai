@@ -12,8 +12,5 @@ export const modeSlice = createSlice({
   }
   });
 
-// this is for dispatch
 export const { setMode } = modeSlice.actions;
-
-// this is for configureStore
 export default modeSlice.reducer;

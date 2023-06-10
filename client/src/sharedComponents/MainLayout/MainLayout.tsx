@@ -1,19 +1,20 @@
 import React from "react";
 import { IconContext } from "react-icons";
-import {useSelector} from "react-redux";
+import {LAYOUT_STYLES} from "./styles.ts";
+import {useAppSelector} from "../../sharedHooks/commonHooks.ts";
 
 interface childrenProps {
   children:  React.ReactNode;
 }
 
 const MainLayout = ({ children }: childrenProps) => {
-  const { mode } = useSelector((state: any) => state.modeReducer);
+  const { mode } = useAppSelector((state) => state.modeReducer);
 
   return (
     <IconContext.Provider value={{ color: mode === 'white' ? 'black' : 'white', className: "global-class-name" }}>
       <div className={mode}>
-        <div className="bg-white text-slate-800 dark:bg-slate-800 dark:text-white h-screen">
-          <div className="container mx-auto">
+        <div className={LAYOUT_STYLES.MAIN_WRAPPER}>
+          <div className={LAYOUT_STYLES.INNER_WRAPPER}>
             { children }
           </div>
         </div>
