@@ -1,4 +1,7 @@
 <h1>IMG_AI</h1>
+<hr><ul>
+<li>Feel free to play: https://imgai.fun/</li>
+</ul><ul>
 <hr><p>Project for convert text to image,
 based on AI</p><h2>General Information</h2>
 <hr><ul>
