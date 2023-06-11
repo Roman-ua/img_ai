@@ -10,7 +10,7 @@ export const listSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(
       getPostsList.fulfilled,
-      (state, action) => {
+      (state, action: any) => {
         state.list = action.payload.data
       }
     )

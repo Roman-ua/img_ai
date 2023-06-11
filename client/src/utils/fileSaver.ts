@@ -1,6 +1,6 @@
 import FileSaver from 'file-saver';
 
-const fileSaver = (_id: number, photo: string) => {
+const fileSaver = (_id: string | undefined, photo: string) => {
   FileSaver.saveAs(photo, `download-${_id}/jpg`);
 }
 
